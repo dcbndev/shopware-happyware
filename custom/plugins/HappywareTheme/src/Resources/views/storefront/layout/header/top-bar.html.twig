@@ -1,0 +1,41 @@
+{% sw_extends '@Storefront/storefront/layout/header/top-bar.html.twig' %}
+
+{% block layout_header_top_bar %}
+<div class="top-bar">
+    <div class="container d-none d-lg-flex justify-content-between">
+        <div class="d-lg-flex align-items-center">
+            <span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon hw-color" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                </svg>
+                Worldwide delivery &amp; support
+            </span>
+            <span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon hw-color" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                </svg>
+                Up to 6 years warranty
+            </span>
+            <span class="d-flex align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon hw-color" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                </svg>
+                On-site repair service
+            </span>
+        </div>
+        <nav class="top-bar-nav">
+            {% block layout_header_top_bar_language %}
+                {% sw_include '@Storefront/storefront/layout/header/actions/language-widget.html.twig' %}
+            {% endblock %}
+
+            {% block layout_header_top_bar_currency %}
+                {% sw_include '@Storefront/storefront/layout/header/actions/currency-widget.html.twig' %}
+            {% endblock %}
+
+            {# @deprecated tag:v6.5.0 - will be removed, has been moved to footer #}
+            {% block layout_header_top_bar_service %}{% endblock %}
+        </nav>
+    </div>
+</div>
+{% endblock %}
+

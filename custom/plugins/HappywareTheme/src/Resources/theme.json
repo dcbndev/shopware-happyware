@@ -1,0 +1,22 @@
+{
+  "name": "HappywareTheme",
+  "author": "Shopware AG",
+  "views": [
+     "@Storefront",
+     "@Plugins",
+     "@HappywareTheme"
+  ],
+  "style": [
+    "app/storefront/src/scss/overrides.scss",
+    "@StorefrontBootstrap",
+    "app/storefront/src/scss/base.scss"
+  ],
+  "script": [
+    "@Storefront",
+    "app/storefront/dist/storefront/js/happyware-theme.js"
+  ],
+  "asset": [
+    "@Storefront",
+    "app/storefront/src/assets"
+  ]
+}
